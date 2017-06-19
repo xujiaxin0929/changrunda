@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file" name="" id="" value="" />
+		<script type="text/javascript">
+			var domFile = document.querySelector("input");
+			
+			domFile.onchange = function(){
+				var FileList = this.files;
+
+				// FileReader 是一个文件读取器
+				// 如何使用
+				
+				var filereader = new FileReader();
+				console.log(filereader);
+			}
+		</script>
+	</body>
+</html>

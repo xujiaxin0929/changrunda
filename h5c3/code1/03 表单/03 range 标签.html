@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<input type="range" name="" id="range" min="0" max="100" step="1" value="0">
+		<output id="output"></output>
+
+		<script>
+			// 找range元素绑定事件
+			// 获取到值赋给output
+			var range = document.getElementById("range");
+			// range.onchange = function(){
+			// 	var val = this.value;
+			// 	document.getElementById("output").innerText = val;
+			// }
+
+			//使用oninput 事件
+			range.oninput = function(){
+				var val = this.value;
+				document.getElementById("output").innerText = val;
+			}
+		</script>
+	</body>
+</html>

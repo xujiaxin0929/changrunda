@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件读取</title>
+</head>
+<body>
+
+	<input type="file" name="" id="" value=""/>
+	
+	<script type="text/javascript">
+
+		// 通过 input type类型是file的标签选中的文件
+		// 返回值是一个FileList 伪数组
+		var file = document.querySelector("input");
+		file.onchange = function(){
+			// FileList 是通过 files 属性获取到的
+			var fl  = this.files;
+			console.log(fl);
+		}
+	</script>
+</body>
+</html>

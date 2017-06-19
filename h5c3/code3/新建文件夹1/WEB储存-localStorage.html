@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    key: <input type="text" id="skey">
+    val: <input type="text" id="sval">
+    <input type="button" id="sbtn" value="set">
+</div>
+<div>
+    key: <input type="text" id="gkey">
+    val: <input type="text" id="gval">
+    <input type="button" id="gbtn" value="get">
+</div>
+<div>
+    key: <input type="text" id="rkey">
+    <input type="button" id="rbtn" value="remove">
+</div>
+<div>
+    <input type="button" id="cbtn" value="clear">
+</div>
+
+<script>
+
+
+    document.querySelector("#sbtn").onclick = function () {
+        var key = document.querySelector("#skey").value;
+        var val = document.querySelector("#sval").value;
+
+        localStorage.setItem(key,val);
+    }
+
+    document.querySelector("#gbtn").onclick = function () {
+        var key = document.querySelector("#gkey").value;
+        var val = localStorage.getItem(key);
+
+        document.querySelector("#gval").value = val;
+    }
+
+//    document.querySelector("#sbtn").onclick = function () {
+//
+//        var key = document.querySelector("#skey").value;
+//        var val = document.querySelector("#sval").value;
+//
+//        localStorage.setItem(key,val);
+//    }
+//
+//    document.querySelector("#gbtn").onclick = function () {
+//        var key = document.querySelector("#gkey").value;
+//
+//        var val = localStorage.getItem(key);
+//        document.querySelector("#gval").value = val;
+//
+//    }
+//    document.querySelector("#rbtn").onclick = function () {
+//        var key = document.querySelector("#rkey").value;
+//
+//        localStorage.removeItem(key);
+//
+//    }
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器 位置伪类</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+
+		ul {
+			width: 560px;
+			padding: 0;
+			margin: 100px auto;
+			list-style: none;
+			border-right: 1px solid #CCC;
+			border-bottom: 1px solid #CCC;
+			overflow: hidden;
+		}
+
+		li {
+			width: 79px;
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+			border-left: 1px solid #CCC;
+			border-top: 1px solid #CCC;
+			background-color: #FFF;
+			font-size: 24px;
+			font-weight: bold;
+			float: left;
+		}
+
+		/*
+		伪类选择器
+		语法特点 :;
+
+		第一个子元素
+		E:first-child;
+		*/
+/*		li:first-child{
+			color:blue;
+		}*/
+
+		/*
+		最后一个子元素
+		E:last-child;
+		*/
+/*		li:last-child{
+			color: red
+		}*/
+
+		/*
+		E:nth-child(n);
+		其父元素的第n个子元素
+		n 乘法因子 理解成变量
+		*/
+/*		li:nth-child(11){
+			color: red;
+		}*/
+
+		/*
+		2n 偶数 关键字 even
+		2n+1 或者 2n-1 奇数 关键字 odd
+		*/
+
+/*		li:nth-child(even)
+		{
+			color:blue;
+		}*/
+
+		/*
+		最后一列
+		*/
+/*		li:nth-child(7n){
+			color:red;
+		}
+		li:nth-child(7n-1){
+			color:green;
+		}*/
+
+		/*
+		倒数的元素
+		E:nth-last-child(n);
+		*/
+/*		li:nth-last-child(3){
+			color:pink;
+		}*/
+
+		/*
+		n  -1n+3
+		0   3
+		1   2
+		2   1
+
+		1   2
+		2   1
+		3   0
+
+		通过推导 n是从0开始的
+		*/
+/*		li:nth-child(-1n+3)
+		{
+			color:red;
+		}*/
+
+		/*
+		关于父元素
+		最大的父元素就是body
+		*/
+/*		ul:first-child{
+			color: red;
+		}*/
+
+/*		body:first-child{
+			color: blue;
+		}*/
+
+/*		li:first-child{
+			color:red;
+		}*/
+		li:nth-child(3){
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+
+	<ul>
+		<li>
+			<ul>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+		</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>11</li>
+		<li>12</li>
+		<li>13</li>
+		<li>14</li>
+		<li>15</li>
+		<li>16</li>
+		<li>17</li>
+		<li>18</li>
+		<li>19</li>
+		<li>20</li>
+		<li>21</li>
+		<li>22</li>
+		<li>23</li>
+		<li>24</li>
+		<li>25</li>
+		<li>26</li>
+		<li>27</li>
+		<li>28</li>
+		<li>29</li>
+		<li>30</li>
+		<li>31</li>
+		<li>32</li>
+		<li>33</li>
+		<li>34</li>
+		<li>35</li>
+	</ul>
+</body>
+</html>

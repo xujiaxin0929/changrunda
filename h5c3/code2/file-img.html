@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<input type="file" name="" id="" value=""/>
+
+
+<script>
+
+    var inputFile = document.querySelector("input");
+
+    inputFile.onchange = function () {
+        var fileList = this.files;
+        var fileReader = new FileReader();
+        fileReader.readAsDataURL(fileList);
+
+        fileReader.onload = function () {
+
+            var res = fileReader.result;
+
+            var style = document.createElement("style");
+            style.innerHTML = res;
+
+            var head = document.querySelector("head");
+            head.appendChild(style);
+
+        }
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

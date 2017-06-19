@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab 标签</title>
+    <style>
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #F7F7F7;
+		}
+	
+		.tabs {
+			width: 400px;
+			margin: 30px auto;
+			background-color: #FFF;
+			border: 1px solid #C0DCC0;
+			box-sizing: border-box;
+		}
+
+		.tabs nav {
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			overflow: hidden;
+			background-color: #C0DCC0;
+			display: flex;
+		}
+
+		nav a {
+			display: block;
+			width: 100px;
+			border-right: 1px solid #FFF;
+			color: #000;
+			text-decoration: none;
+		}
+
+		nav a:last-child {
+			border-right: 0 none;
+		}
+
+		nav a.active {
+			background-color: #9BAF9B;
+		}
+
+		.cont {
+			overflow: hidden;
+			display: none;
+		}
+
+		.cont ol {
+			line-height: 30px;
+		}
+
+    </style>
+
+</head>
+<body>
+
+	<div class="tabs">
+		<nav>
+			<a href="javascript:;" data-id="local">国内新闻</a>
+			<a href="javascript:;" data-id="global">国际新闻</a>
+			<a href="javascript:;" data-id="sports">体育新闻</a>
+			<a href="javascript:;" data-id="funny">娱乐新闻</a>
+		</nav>
+		<section class="cont" id="local">
+			<ol>
+				<li>国内新闻</li>
+				<li>禽流感在感在广1处继续蔓延，温家宝指示</li>
+				<li>南方大旱，农作物减产绝收面积上亩</li>
+				<li>猪流感在广在全国暴发</li>
+				<li>禽流感在全国多处继续蔓延，温家宝指示</li>
+				<li>南方大旱，农作物减产绝收面积上亩</li>
+				<li>猪流感在广东群体性暴发</li>
+			</ol>
+		</section>
+		<section class="cont" id="global">
+			<ol>
+				<li>国际新闻</li>
+				<li>禽流感次发生蔓延，温家宝指示</li>
+				<li>南方大旱，农作物减产绝收面积上亩</li>
+				<li>猪流感在广减产绝收发</li>
+				<li>禽流感在全国多作物减产绝收面积上亩</li>
+				<li>猪流感在广东群体性暴发</li>
+			</ol>
+		</section>
+		<section class="cont" id="sports">
+			<ol>
+				<li>体育新闻</li>
+				<li>禽流感在全国多处农作物农延，温家宝指示</li>
+				<li>南方大旱，农作物减产绝收面积上亩</li>
+				<li>猪流感在广东群体性暴发</li>
+				<li>禽流感在全农作物继续蔓延，温家宝指示</li>
+				<li>南方大农作物减产绝收面积上亩</li>
+				<li>猪流感在广东群体性暴发</li>
+			</ol>
+		</section>
+		<section class="cont" id="funny">
+			<ol>
+				<li>娱乐新闻</li>
+				<li>禽流感在全国物农延，温家宝指示</li>
+				<li>南方大旱，农作物减产绝收面积上亩</li>
+				<li>猪流感在广东群体性暴发</li>
+				<li>禽流感在全农作物继续蔓延，温家宝指示</li>
+				<li>猪流感在广东群体性暴发</li>
+			</ol>
+		</section>
+    </div>
+    <script>
+
+    	(function(key){
+
+	    	// 1、找到每一个a标签
+	    	var labs = document.querySelectorAll("a");
+	    	var active,id;
+
+	    	for(var i=0;i<labs.length;i++)
+	    	{
+	    		if(i==key){
+	    			labs[i].classList.add("active");
+	    			id = labs[i].dataset["id"];
+	    			document.querySelector("#"+id).classList.remove("cont");
+	    		}
+
+	    		// 2、给每一个a标签绑定click事件
+	    		labs[i].onclick = function(){
+	    			//2.1 获取当前具有active 的a标签
+	    			active = document.querySelector(".active");
+	    			id = active.dataset["id"];
+
+	    			// 3、在处理详细内容的切换
+	    			document.querySelector("#"+id).classList.add("cont");
+
+	    			// 2.2 将其class属性移除
+	    			active.classList.remove("active");
+	    			// 给当前点击的a标签添加class属性
+	    			this.classList.add("active");
+
+	    			id = this.dataset["id"];
+
+	    			document.querySelector("#"+id).classList.remove("cont");
+
+	    		}
+	    	}
+
+    	})(1)
+
+
+
+
+    	// 关键字定义表达式
+    	// function fun(){
+
+    	// }
+
+    	//fun();
+
+    	//字面量定义表达式
+    	// (function(){
+    	// 	alert("dd");
+    	// })()
+
+
+
+    	//fun();
+
+
+	</script>
+</body>
+</html>

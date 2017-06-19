@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 API 视频</title>
+</head>
+<body>
+
+<!-- 
+video 标签
+	属性 autoplay 自动播放
+		 controls 控制面板
+		 loop     是否循环播放
+
+	支持三种播放格式 mp3 ogg webm
+
+	注意多种写法
+ -->
+
+<!-- 	<video src="video/movie.mp4" autoplay="autoplay" controls="controls" loop="loop" width="300px" height="900px"></video> -->
+
+	<video controls="controls" loop="loop" autoplay="autoplay">
+		<source src="video/movie.mp4">
+		<source src="video/movie.ogg">
+		<source src="video/movie.webm">
+		您的浏览器不支持video
+	</video>
+</body>
+</html>

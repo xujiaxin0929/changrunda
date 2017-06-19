@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>session storage</title>
+</head>
+<body>
+	<div>
+		key: <input type="text" id="skey">
+		val: <input type="text" id="sval">
+		<input type="button" id="sbtn" value="set">
+	</div>
+	<div>
+		key: <input type="text" id="gkey">
+		val: <input type="text" id="gval">
+		<input type="button" id="gbtn" value="get">
+	</div>
+	<div>
+		key: <input type="text" id="rkey">
+		<input type="button" id="rbtn" value="remove">
+	</div>
+	<div>
+		<input type="button" id="cbtn" value="clear">
+	</div>	
+
+	<script>
+
+		// sessionStorage
+		// 也是本地存储的一种方式
+
+		// 保存数据
+		document.querySelector("#sbtn").onclick = function(){
+			var key = document.querySelector("#skey").value;
+			var val = document.querySelector("#sval").value;
+			
+			// 保存数据
+			sessionStorage.setItem(key,val);
+		}
+
+		// 获取数据
+		document.querySelector("#gbtn").onclick = function(){
+			var key = document.querySelector("#gkey").value;
+			// 获取数据的方法
+			var val = sessionStorage.getItem(key);
+			
+			document.querySelector("#gval").value = val;
+		}
+
+		// 删除数据
+		document.querySelector("#rbtn").onclick = function(){
+			var key = document.querySelector("#rkey").value;
+			// 删除数据的方法
+			sessionStorage.removeItem(key);
+			
+		}
+
+		// 完全清除
+		document.querySelector("#cbtn").onclick = function(){
+
+			// 完全删除数据的方法
+			sessionStorage.clear();
+			
+		}
+
+		// 特点
+		// 1、localStorage 是持久存储，不主动删除 一直存在
+		//    sessionStorage 是零时存储,关闭浏览器数据就没了
+		// 2、localStorage 可以多窗口共享
+	    //    sessionStorage 不能多窗口共享数据
+
+
+
+	
+	</script>
+</body>
+</html>

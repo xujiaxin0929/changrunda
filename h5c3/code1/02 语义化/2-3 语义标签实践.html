@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>语义标签实践</title>
+	<style>
+		html,body{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		header,footer{
+			width:1000px;
+			height: 100px;
+			margin: 0 auto;
+			background: pink;
+			overflow: hidden;
+		}
+		h1{
+			margin: 10px;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			float: left;
+			margin:0 10px;
+		}
+		section{
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		section article{
+			width: 750px;
+			float: left;
+		}
+		section aside{
+			width:250px;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>我的网站</h1>
+		<nav>
+			<ul>
+				<li>首页</li>
+				<li>新闻</li>
+				<li>关于</li>
+			</ul>
+		</nav>
+	</header>
+	<section class="containt">
+		<article>
+			<h3>我的文章</h3>
+			<p>段落</p>
+			<p>段落</p>
+			<figure>
+				<img src="images/1.jpg" alt="">
+				<figcaption>我的图片</figcaption>
+			</figure>
+			<p>段落</p>
+		</article>
+		<aside>
+			侧边
+		</aside>
+	</section>
+	<footer>版权信息</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地理定位</title>
+	<style>
+		#myMap{
+			width: 500px;
+			height: 500px;
+			border:1px solid #ccc;
+		}
+	</style>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=rwq4G6mMQjx9KGnn13yUqekmNqnQt8yH"></script>
+</head>
+<body>
+	<h1>百度地图</h1>
+	<div id="myMap"></div>
+	<script>
+		// 1、获取当前位置
+		navigator.geolocation.getCurrentPosition(successCallBack,errorCallBack);
+
+		// 1.1、定义成功的回调函数
+		function successCallBack(position){
+			var longitude = position.coords.longitude;
+			var latitude = position.coords.latitude;
+
+			console.log(longitude);
+			console.log(latitude);
+
+			// 2、调用百度地图
+			// 2.1、获取地图对象
+			var map = new BMap.Map("myMap");
+			// 2.2、获取定位点
+			var point = new BMap.Point(longitude,latitude);
+			// 2.3、设置地图的中心点以及放大级别
+			map.centerAndZoom(point,18);
+
+			//创建小狐狸
+			var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
+			var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
+			map.addOverlay(marker2);
+
+
+		}
+		// 1.2、定义失败的回调函数
+		function errorCallBack(error){
+			console.log(error);
+		}
+
+			// 下面的代码应该放到successCallBack函数中
+			// 因为win7 下各个浏览器都获取不到位置信息
+//			var longitude = 116.4065;
+//			var latitude = 40.1089;
+
+
+
+	</script>
+</body>
+</html>

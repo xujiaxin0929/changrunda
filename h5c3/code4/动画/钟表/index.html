@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+          .box {
+               width: 300px;
+               height: 300px;
+               border: 5px solid #ccc;
+               border-radius: 50%;
+
+               margin: 50px auto;
+
+               position: relative;
+          }
+
+          .line {
+               position: absolute;
+               width: 2px;
+               height: 100%;
+               background-color: #dddddd;
+               left: 50%;
+               top: 50%;
+               margin-top: -150px;
+               margin-left: -1px;
+          }
+
+          .line:nth-child(1) {
+               width: 4px;
+          }
+          .line:nth-child(2) {
+               transform: rotateZ(30deg);
+          }
+          .line:nth-child(3) {
+               transform: rotate(60deg);
+          }
+          .line:nth-child(4) {
+              width: 4px;
+              transform: rotate(90deg);
+          }
+          .line:nth-child(5) {
+              transform: rotate(-30deg);
+          }
+          .line:nth-child(6) {
+              transform: rotate(-60deg);
+          }
+
+          .cover {
+               width: 270px;
+               height: 270px;
+               background-color: #fff;
+               position: absolute;
+               border-radius: 50%;
+               left: 50%;
+               top: 50%;
+               margin-top: -135px;
+               margin-left: -135px;
+          }
+
+          .dot {
+               position: absolute;
+               width: 20px;
+               height: 20px;
+               background-color: pink;
+               border-radius: 50%;
+               left: 50%;
+               top: 50%;
+               margin-left: -10px;
+               margin-top: -10px;
+               z-index: 10;
+          }
+
+        .h {
+            width: 4px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            margin-left: -1px;
+
+
+        }
+        .m {
+             width: 4px;
+             height: 110px;
+             background-color: green;
+             position: absolute;
+             left: 50%;
+             top: 40px;
+             margin-left: -1px;
+             transform-origin: bottom;
+             animation: rotate  3600s  steps(3600) infinite;
+        }
+
+        .s {
+            width: 4px;
+            height: 120px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            margin-left: -1px;
+            transform-origin: bottom;
+            animation: rotate 60s steps(60) infinite;
+        }
+        
+        @keyframes rotate {
+            from {
+                 transform: rotateZ(0deg);
+            }
+
+            to {
+               transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="cover"></div>
+            <div class="dot"></div>
+
+            <div class="h"></div>
+            <div class="m"></div>
+            <div class="s"></div>
+        </div>
+</body>
+</html>

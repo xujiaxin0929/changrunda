@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		navigator.geolocation.watchPosition(successCallBack,errorCallBack);
+
+		function successCallBack(position){
+			console.log(position);
+			// coords 位置
+			var longitude = position.coords.longitude;
+			var latitude = position.coords.latitude;
+			console.log(longitude);
+			console.log(latitude);
+		}
+
+		// 定义失败的回调函数
+		function errorCallBack(error){
+			console.log(error);
+		}
+
+	</script>
+</body>
+
+</html>

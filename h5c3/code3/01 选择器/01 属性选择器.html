@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器</title>
+		<style type="text/css">
+			body{
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+
+			/*
+			ID选择器
+			通过id来选择元素
+			语法特点  #
+
+			Class选择器
+			通过类来选择元素
+			语法特点  .
+
+			属性选择器
+			通过属性来选择元素
+			语法特点  []
+			*/
+
+			/*
+			[attr]
+			具有某一个属性的元素
+			*/
+			[href]{
+				padding-left: 18px
+			}
+
+			/*
+			[attr=""]
+			属性值完全等于某个值
+			*/
+			[href="pdf.pdf"]{
+				background: url(images/icon_pdf.gif) no-repeat;
+			}
+			
+			/*
+			[attr$=""]
+			属性值的结尾等于某个值
+			*/
+			[href$=".ppt"]{
+				background: url(images/icon_ppt.gif) no-repeat;
+			}
+
+			/*
+			[attr^=""]
+			属性值的开始等于某个值
+			*/
+			[href^="xls"]{
+				background: url(images/icon_xls.gif) no-repeat;
+			}
+
+			/*
+			[attr*=""]
+			属性值包含某个值，位置不固定
+			*/
+			[href*="r.r"]{
+				background: url(images/icon_rar.gif) no-repeat;
+			}
+
+
+			
+		</style>
+	</head>
+	<body>
+		<p><a href="pdf.pdf">PDF文件</a> </p>
+		<p><a href="ppt.ppt">PPT文件</a> </p>
+		<p><a href="xls.xls">XLS文件</a> </p>
+		<p><a href="rar.rar">RAR文件</a> </p>
+		<p><a href="gif.gif">GIF文件</a> </p>
+		<p><a href="txt.txt">TXT文件</a> </p>
+		<p><a href="rar.rar">RAR文件</a> </p>
+		<p><a href="gif.gif">GIF文件</a> </p>
+		<p><a href="txt.txt">TXT文件</a> </p>
+		<p><a href="pdf.pdf">PDF文件</a> </p>
+		<p><a href="ppt.ppt">PPT文件</a> </p>
+		<p><a href="xls.xls">XLS文件</a> </p>
+		<p><a href="rar.rar">RAR文件</a> </p>
+		<p><a href="gif.gif">GIF文件</a> </p>
+		<p><a href="txt.txt">TXT文件</a> </p>
+		<p><a href="rar.rar">RAR文件</a> </p>
+		<p><a href="gif.gif">GIF文件</a> </p>
+		<p><a href="txt.txt">TXT文件</a> </p>
+		<p><a href="xls.xls">XLS文件</a> </p>
+		<p><a href="rar.rar">RAR文件</a> </p>
+	</body>
+</html>

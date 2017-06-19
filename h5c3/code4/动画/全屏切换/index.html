@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+         * {
+             margin: 0;
+             padding: 0;
+
+         }
+
+         html,body {
+              width: 100%;
+              height: 100%;
+
+         }
+         .box {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              position: relative;
+         }
+         .box>div {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             background-size: cover;
+         }
+         .one {
+             background: url(img/bg1.jpg) no-repeat;
+             z-index: 3;
+         }
+         .two {
+             background: url(img/bg2.jpg) no-repeat;
+             z-index: 2;
+         }
+         .three {
+             background: url(img/bg3.jpg) no-repeat;
+             z-index: 1;
+         }
+
+        div.pages {
+            width: 300px;
+            height: 100px;
+            bottom: 50px;
+            left: 50%;
+            margin-left: -150px;
+            z-index: 4;
+        }
+        a {
+             text-decoration: none;
+             display: block;
+             width: 50px;
+             height: 50px;
+             line-height: 50px;
+             text-align: center;
+             border-radius: 50%;
+             background-color: pink;
+             font-size: 30px;
+             float: left;
+             margin: 0 25px;
+        }
+
+        .one:target {
+             z-index: 4;
+             animation: move1 2s linear;
+        }
+         .two:target {
+             z-index: 4;
+             animation: rotate 2s linear;
+         }
+         .three:target {
+             z-index: 4;
+             animation: rotate1 2s linear;
+         }
+         @keyframes move1 {
+             from {
+                transform: translateX(-100%);
+             }
+             to {
+                transform: translateX(0px);
+             }
+         }
+         @keyframes rotate {
+             from {
+                 transform:  scale(0);
+             }
+
+             to {
+              transform: scale(1);
+             }
+         }
+         @keyframes rotate1 {
+              from {
+                  transform: scale(0) rotateZ(0deg);
+              }
+
+              to {
+                 transform: scale(1) rotateZ(360deg);
+              }
+         }
+    </style>
+</head>
+<body>
+        <div class="box">
+
+            <div class="one" id="one"></div>
+            <div class="two" id="two"></div>
+            <div class="three" id="three"></div>
+
+            <div class="pages">
+                <a href="#one">1</a>
+                <a href="#two">2</a>
+                <a href="#three">3</a>
+            </div>
+        </div>
+</body>
+</html>

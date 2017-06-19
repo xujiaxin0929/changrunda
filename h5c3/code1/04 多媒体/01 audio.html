@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 API 音频</title>
+</head>
+<body>
+
+<!-- 
+audio 标签
+	属性 autoplay 自动播放
+		 controls 控制面板
+		 loop     是否循环播放
+
+	支持三种播放格式 mp3 ogg wav
+
+	注意多种写法
+ -->
+<!-- 	<audio src="music/see you again.mp3" autoplay="autoplay" controls="controls" loop="loop"></audio> -->
+
+	<audio autoplay="autoplay" controls="controls" loop="">
+		<source src="music/see you again.mp3">
+		<source src="music/see you again.ogg">
+		<source src="music/see you again.wav">
+		你的浏览器不支持audio标签
+	</audio>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器 - 伪元素</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		div{
+			width:500px;
+			margin:100px auto;
+			font-size: 80px;
+		}
+		div span{
+			display: inline-block;
+			width:100px;
+			height:100px;
+			line-height: 100px;
+			text-align: center;
+			position: relative;
+		}
+		span:first-child::before{
+			content: "传";
+			display: inline-block;
+			position: absolute;
+			color: red;
+			width:50%;
+			overflow: hidden;
+		}
+		span:nth-child(2)::before{
+			content: "智";
+			display: inline-block;
+			position: absolute;
+			color: darkcyan;
+			height:50%;
+			overflow: hidden;
+		}
+		span:nth-child(3){
+			color:red
+		}
+		span:nth-child(3)::before{
+			content: "播";
+			display: inline-block;
+			position: absolute;
+			height:50%;
+			color: black;
+			overflow: hidden;
+		}
+		span:nth-child(4){
+			color:deeppink;
+		}
+		span:nth-child(4)::before{
+			content: "客";
+			display: inline-block;
+			position: absolute;
+			width:50%;
+			color: black;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span>传</span><span>智</span><span>播</span><span>客</span>
+	</div>
+</body>
+</html>

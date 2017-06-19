@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var data = {
+				"name":"tom",
+				"age":26
+			};
+			var a = "age";
+			
+			//两种获取数据的方式
+			//第一种是明确知道 key的时候使用
+			//console.log(data.name);
+			//key 是通过变量方式传过来的 
+			//console.log(data[a]);
+			
+			//json数据 对象转换成字符串的方式
+			//JSON.stringify(obj) 对象转字符串的方式
+			//JSON.parse(str) 字符串转换成对象
+			//打印的是对象
+			console.log(data);
+			
+			var str = JSON.stringify(data)
+			//打印的是字符串
+			console.log(str);
+			
+			//打印成对象
+			console.log(JSON.parse(str));
+		</script>
+	</body>
+</html>

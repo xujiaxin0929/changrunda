@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全屏</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<h1>全屏</h1>
+	<button class="btn">全屏</button>
+	<div class="box"></div>
+	<script>
+		// 方法 rquestFullScreen();
+		// 谷歌的写法 webkitRequestFullScreen();
+		// 火狐的写法 mozRequestFullScreen();
+
+		var btn = document.querySelector(".btn");
+		var box = document.querySelector(".box");
+
+		btn.onclick = function(){
+			// 谷歌
+			// box.webkitRequestFullScreen();
+			// 火狐
+			 box.mozRequestFullScreen();
+		}
+
+		
+	</script>
+</body>
+</html>

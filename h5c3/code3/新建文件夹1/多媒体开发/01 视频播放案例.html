@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频播放器</title>
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<link rel="stylesheet" href="./css/player.css">
+</head>
+<body>
+	<figure>
+		<figcaption>视频播放器</figcaption>
+		<div class="player">
+			<video src="./video/毕业设计.mp4"></video>
+			<div class="controls">
+				<!-- 播放/暂停 -->
+				<a href="javascript:;" class="switch fa fa-play"></a>
+				<!-- 全屏 -->
+				<a href="javascript:;" class="expand fa fa-expand"></a>
+				<!-- 进度条 -->
+				<div class="progress">
+					<div class="line"></div>
+					<div class="bar"></div>
+				</div>
+				<!-- 时间 -->
+				<div class="timer">
+					<span class="current">00:00:00</span> /
+					<span class="total">00:00:00</span>
+				</div>
+				<!-- 声音 -->
+			</div>
+		</div>
+	</figure>
+	<script src="./js/jquery.min.js"></script>
+	<script>
+
+		var video = $("video")[0];
+		var total = $(".total");
+		var h,m,s;
+
+		//1、判断视频是否能够播放，如果能够播放显示video，获取总的时长
+		video.oncanplay=function(){
+			//1.1 显示video,隐藏loding
+			video.style.display = "block";
+
+			//1.2 获取总时长
+			var time = video.duration;
+			//console.log(time);
+			h = Math.floor(time / 3600);
+			m = Math.floor(time % 3600 / 60);
+			s = Math.floor(time % 60);
+			//console.log(h,m,s);
+
+			//1.3 对时分秒做进一步处理，不足两位前面补足0
+			h = h<10? "0"+h : h;
+			m = m<10? "0"+m : m;
+			s = s<10? "0"+s : s;
+			//console.log(h,m,s);
+
+			//1.4 将计算的总时长放入 total 标签中
+			total.text(h+":"+m+":"+s);
+		}
+
+		//2、播放按钮 切换功能 播放与暂停的功能
+		$(".switch").on("click",function(){
+			//2.1、图标的切换
+			$(this).toggleClass("fa-pause","fa-play");
+
+			//2.3、播放与暂停功能
+			if(video.paused){
+				video.play();
+			}
+			else{
+				video.pause();
+			}
+		})
+
+		//3、处理当前时间与进度条
+		video.ontimeupdate=function(){
+			//3.1、处理当前时间
+			var time = video.currentTime;
+			h = Math.floor(time / 3600);
+			m = Math.floor(time % 3600 / 60);
+			s = Math.floor(time % 60);
+
+			h = h<10 ? "0"+h : h;
+			m = m<10 ? "0"+m : m;
+			s = s<10 ? "0"+s : s;
+
+			$(".current").text(h+":"+m+":"+s);
+
+			//3.2、处理进度条
+			var width = time / video.duration * 100;
+			$(".line").width(width+"%");
+		}
+
+		//4、处理 时间轴的拖拽
+		$(".bar").on("click",function(event){
+			var x = event.offsetX;
+			console.log(x);
+			video.currentTime = x / $(this).width() * video.duration;
+		})
+
+		//5、处理全屏功能
+		$(".expand").on("click",function(){
+			//webkitRequestFullScreen()
+			//只适用于谷歌浏览器
+			video.webkitRequestFullScreen();
+		})
+
+
+
+	</script>
+</body>
+</html>
