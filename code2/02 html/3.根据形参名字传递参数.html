@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 演示通过形参的名字传递参数
+		
+		// 定义controller函数 并且有一个callback参数 函数类型
+		function controller(callback){
+			var $scope = {};
+			var abc = {};
+			// 1.获取形参 返回形参数组
+			var arr = callback.toString().split(/\(|\)/)[1].split(',');
+			// 2.将形参替换成真正的实参
+			for(var i=0;i<arr.length;i++){
+
+				switch( arr[i] ){
+					case '$scope':
+						arr[i] = $scope;
+						break;
+					case 'abc':
+
+						arr[i] = abc;
+						break;
+				}
+			}
+
+			// 3.用真正的实参调用函数
+			callback.apply(null,arr);
+
+			console.log('$scope',$scope)
+			console.log('abc',abc)
+
+
+		}
+
+		// 调用controller函数 传递一个回调函数作为参数
+		controller(function(abc,$scope){
+
+			$scope.a = '1';
+
+			abc.b = '2';
+
+		})
+
+	</script>
+</body>
+</html>

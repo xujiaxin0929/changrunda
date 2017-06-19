@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="demoCtrl">
+	<!--
+		
+		onmouseover -> ng-mouseover
+
+		$event 事件对象 
+
+	-->
+	
+	<div ng-click="clickFn($event)">11111</div>
+	<div ng-mouseover="a()">2222</div>
+	<div ng-dblclick="dbclickfn()">3333</div>
+
+
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script>
+		angular.module('myApp',[])
+
+			.controller('demoCtrl',['$scope',function($scope){
+
+				
+				$scope.clickFn = function(ev){
+
+					alert(1)
+
+					console.log(ev)
+
+				}
+
+				$scope.a = function(){
+
+					// alert('mouseover')
+
+				}
+
+				$scope.dbclickfn = function(){
+
+					alert('dbclickfn')
+
+				}
+
+
+			}])
+
+	</script>
+</body>
+</html>

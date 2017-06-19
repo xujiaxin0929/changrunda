@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="inp">
+	<button id="btn">+1</button>
+	<script>
+		/*
+			1.获取元素
+			2.给按钮添加点击事件
+			3.获取文本框的值 并且+1
+			4.将值重新赋值给文本框
+
+			在html中获取的值 都是字符串类型的
+
+		 */
+		
+		// 1.获取元素
+		var oInp = document.getElementById('inp');
+		var oBtn = document.getElementById('btn');
+
+		// 2.给按钮添加点击事件
+		oBtn.onclick = function(){
+
+			// "1"
+			var num = (oInp.value - 0)  + 1;
+
+			oInp.value = num;
+
+		}
+
+	</script>
+</body>
+</html>

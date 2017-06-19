@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<!--
+		{{  }}  插值表达式
+			
+			作用：
+				1.解析angular当中的变量
+				2.输出字符串
+				3.计算
+				4.三目运算符
+
+		ng-init 给变量赋初始值
+
+			ng-init="变量=''"
+
+		指令:
+		
+			在angular中 以ng开头的属性叫做指令
+
+			作用:DOM操作
+	-->
+<body ng-app ng-init="val='我是通过ng-init赋的初始值'">
+	<input type="text" ng-model="val">
+	<div> {{ val }} </div>
+	<div> {{ 'angular' }} </div>
+	<div> {{ 1+1 }} </div>
+	<div> {{ 1+1==2 ? '相等' : '不相等' }} </div>
+	<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
+<!-- 
+	1.获取元素
+	2.获取文本框的值 并赋值给DIV
+	3.监听文本框的输入事件 
+	4.重复第二步
+-->	
