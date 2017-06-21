@@ -1,0 +1,197 @@
+@import 'base.less';
+@import 'mixin.less';
+.pay-head{
+    .init(74px);
+    .payhead-w{
+        width:@pay-big;
+        margin:@margin;
+        border-bottom:2px solid #dedee0;
+        .payhead-main{
+            p{
+                line-height: 74px;
+                font-size: 20px;
+                color: #030305;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.pay-content{
+    .init(240px);
+    margin-top: 58px;
+    .content-w{
+        width: @pay-big;
+        margin: @margin;
+        padding-left: 30px;
+        box-sizing: border-box;
+        .content-border{
+            width: 215px;
+            height: 242px;
+            border: 2px solid #d8d9bd;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-right: 46px;
+            cursor: pointer;
+            .bg-xuanzhong{
+                display: none;
+            }
+            .content-report{
+                width: 188px;
+                height: 208px;
+                // border: 1px solid black;
+                background:url(../img/切图/bg.png) no-repeat;
+                background-size: 188px 208px;
+                // margin-left: 0px;
+                text-align: center;
+                overflow: auto;
+                img{
+                    display: block;
+                    margin-top: 28px;
+                    margin-left: 72px;
+                }
+                
+                span{
+                    display: block;
+                    margin-top: 14px;
+                    text-align: center;
+                    color: #2b88d6;
+                    font-size: 16px;
+                    
+                }
+                p{
+                    display: block;
+                    margin-top: 78px;
+                    text-align: center;
+                    color: #e07e4d;
+                    font-size: 20px;
+                }
+            }
+        }
+        .content-change{
+            width: 215px;
+            height: 242px;
+            border: 2px solid #509cd8;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-right: 46px;
+            position: relative;
+            cursor: pointer;
+            .bg-xuanzhong{
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+            }
+            .content-report{
+                width: 188px;
+                height: 208px;
+                // border: 1px solid black;
+                background:url(../img/切图/bg.png) no-repeat;
+                background-size: 188px 208px;
+                text-align: center;
+                overflow: auto;
+                img{
+                    display: block;
+                    margin-top: 28px;
+                    margin-left: 72px;
+                }
+                
+                span{
+                    display: block;
+                    margin-top: 14px;
+                    text-align: center;
+                    color: #2b88d6;
+                    font-size: 16px;
+                    
+                }
+                p{
+                    display: block;
+                    margin-top: 78px;
+                    text-align: center;
+                    color: #e07e4d;
+                    font-size: 20px;
+                }
+            }
+        }
+         .content-more{
+            width: 214px;
+            height: 242px;
+            border: 2px solid #d8d9bd;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-right: 46px;
+            cursor: pointer;
+            img{
+                display: block;
+                margin-top: 54px;
+                margin-left: 78px;
+                margin-bottom: 38px;
+            }
+            span{
+                display: block;
+                width: 215px;
+                // text-align: center;
+                margin-bottom: 18px;
+                font-size: 16px;
+                font-weight: 600;
+                // margin-left: calc(215px/2x);
+                margin-left: 66px;
+            }
+         }
+    }
+    // div:nth-child(1){
+    //         margin-left: 30px;
+    //     }
+    
+}
+
+.pay-btn{
+    .init(220px);
+    .btn-w{
+        width: @pay-small;
+        margin: @margin;
+        button{
+            width: 164px;
+            height: 58px;
+            background:url(../img/切图/button.png) no-repeat;
+            background-size: 164px 58px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 30px;
+            margin-top: 72px;
+            box-shadow: 0px 2px 1px #ccaca1;
+            color: #ffffff;
+            
+        }
+    }
+}
+.pay-illu{
+    .init(220px);
+    .illu-w{
+        width:@pay-small;
+        margin: @margin;
+        height: 218px;
+        border: 1px dashed #d5d5d5;
+        div{
+            padding-left: 24px;
+            box-sizing: border-box;
+            h5{
+                height:86px;
+                line-height: 86px;
+                font-size: 18px;
+                font-weight:700;
+                color: #101113;
+                
+            }
+            ul{
+                    li{
+                        height: 36px;
+                        color: #68696b;
+                    }
+                }
+        }
+    }
+}
