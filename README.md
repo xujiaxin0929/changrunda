@@ -1,13 +1,13 @@
-# 一个会动的简历模板
+# 徐佳鑫简历
 
 > This is my resume
 
-[预览](https://xujiaxin0929.github.io/zhifu/dist/)
+[预览](https://xujiaxin0929.github.io/xujiaxinVue/dist/)
 
 ## 使用方法
 
 ``` bash
-git clone git@github.com:xujiaxin0929/zhifu.git
+git clone git@github.com:xujiaxin0929/xujiaxinVue.git
 cd zhifu
 npm install
 npm run dev
