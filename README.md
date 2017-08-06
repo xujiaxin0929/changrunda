@@ -4,6 +4,8 @@
 
 [预览](https://xujiaxin0929.github.io/xujiaxinVue/dist/)
 
+![Image text](https://github.com/xujiaxin0929/xujiaxinVue/blob/master/static/1502038549.png)
+
 ## 使用方法
 
 ``` bash

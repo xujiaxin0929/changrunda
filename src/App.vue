@@ -26,7 +26,7 @@
 * 您好，我是徐佳鑫 
 * 他是基于Vue webpack 及 marked prismjs这两个插件制作的简历
 * 最好使用firfox或最新版的chrome观看 
-* 别着急关 请给我两分钟时间 么么哒！
+* 兼容iphone6P，7,7P 最后会有移动端二维码
 */
 
 /* 首先给所有元素加上过渡效果 */
@@ -152,6 +152,8 @@ html{
 * ["某"锤数据展示]
 * [员工后台首页改版]
 > 外包公司累死人 (TWT)
+
+![Image text](https://github.com/xujiaxin0929/xujiaxinVue/blob/master/static/1502038549.png)
 
 `
       }
