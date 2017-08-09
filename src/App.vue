@@ -147,7 +147,7 @@ html{
 ----
 
 * [红麦舆情4.7测试上线版](http://www.soften.cn/)
-* [海密严选及红麦竞价]
+* [海密严选及红麦竞价](http://m.haimi.com/webapp/category)
 * [亿美汇金](http://www.mocredit.cn/#page1)
 * ["某"锤数据展示]
 * [员工后台首页改版]
@@ -242,5 +242,6 @@ html{
   * {
     -webkit-transition: all .3s;
     transition: all .3s;
+    -webkit-backface-visibility: hidden
   }
 </style>
