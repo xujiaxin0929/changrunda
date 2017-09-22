@@ -23,10 +23,10 @@
         enableHtml: false,
         fullStyle: [
           `/*
-* 您好，我是徐佳鑫 
+* 您好，我是徐佳鑫 TEL:15001077081
 * 他是基于Vue webpack 及 marked prismjs这两个插件制作的简历
-* 最好使用firfox或最新版的chrome观看 
-* 兼容iphone6P，7,7P 最后会有移动端二维码
+* 这是之前做的一个vue版简历 
+* 请看到最后会有详细介绍 如果您觉得合适 可以给一个面试机会 上边有我的电话号码
 */
 
 /* 首先给所有元素加上过渡效果 */
@@ -136,22 +136,23 @@ html{
 * bootstrap MUI MINT-UI echarts swiper
 * Vue angular
 * Git webpack
-* Less artTemplate RequireJS ES6(ECMAscript 2015)
+* Less sass artTemplate RequireJS ES6(ECMAscript 2015)
+* ftp wss
 
 工作经历
 ----
-
-1. 博彦多彩数据科技有限公司全资子公司
+1. 京橙创意科技网络有限公司
+2. 博彦多彩数据科技有限公司全资子公司
 
 项目经历
 ----
-
+* [璇极伏羲大数据响应式官网](http://6192.jingchengidea.com/)
+* [北京中科天宁投资PC端](http://9225.jingchengidea.com/)
+* [全国产业与金融创新平台（响应式）](web.jingchengidea.6496)
 * [红麦舆情4.7测试上线版](http://www.soften.cn/)
 * [海密严选及红麦竞价](http://m.haimi.com/webapp/category)
-* [亿美汇金](http://www.mocredit.cn/#page1)
 * ["某"锤数据展示]
 * [员工后台首页改版]
-> 外包公司累死人 (TWT)
 
 ![Image text](https://github.com/xujiaxin0929/xujiaxinVue/blob/master/static/1502038549.png)
 
