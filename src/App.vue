@@ -23,10 +23,8 @@
         enableHtml: false,
         fullStyle: [
           `/*
-* 您好，我是徐佳鑫 TEL:15001077081
-* 他是基于Vue webpack 及 marked prismjs这两个插件制作的简历
-* 这是之前做的一个vue版简历 
-* 请看到最后会有详细介绍 如果您觉得合适 可以给一个面试机会 上边有我的电话号码
+
+* 积木网2018年个人年终总结
 */
 
 /* 首先给所有元素加上过渡效果 */
@@ -80,15 +78,9 @@ html{
 
 
 `,
-          `
-/* 这个简历好像差点什么
- * Markdown格式，如果您是HR 别担心 已经优化过 
- * 体贴不
- */
-`
           ,
           `
-/* 再对 HTML 加点样式 */
+/* 再对 Markdown 加点样式 */
 .resumeEditor{
   padding: 2em;
 }
@@ -123,36 +115,38 @@ html{
 }
 `],
         currentMarkdown: '',
-        fullMarkdown: `徐佳鑫-15001077081
+        fullMarkdown: `年终总结
 ----
 
-前端开发工程师 web前端开发
+前端 徐佳鑫
 
-技能
+18年总结
+----
+1. 完成年初目标 做了几个小程序 算是入门啦
+2. 知道并解决了更多的移动端兼容 （暂未解决：华为荣耀图片上传）
+3. 对ES6的语法应用场景变多 更熟练 
+4. 开始转向 面向对象及模块化 组件化 的书写习惯(还在学习中) 甩掉了面向过程
+5. 经过几个诺基亚的项目 对css3动画有了进一步的认识
+6. 对前后分离和后台套页面有了进一步的认识
+7. 和各位同事相处 个人认为比较融洽
+
+19年规划
 ----
 
-* HTML5 CSS3 JavaScript
-* jQuery Ajax JSON
-* bootstrap MUI MINT-UI echarts swiper
-* Vue angular
-* Git webpack
-* Less sass artTemplate RequireJS ES6(ECMAscript 2015)
-* ftp wss
+* 多多使用vue
+* 跟后台学习简单的数据库 
+* 学习node 操作数据库
+* 继续学习 面向对象 组件化
+* 深入学习webpack
 
-工作经历
+项目总结
 ----
-1. 京橙创意科技网络有限公司
-2. 博彦多彩数据科技有限公司全资子公司
-
-项目经历
-----
-* [璇极伏羲大数据响应式官网](http://6192.jingchengidea.com/)
-* [北京中科天宁投资PC端](http://9225.jingchengidea.com/)
-* [全国产业与金融创新平台（响应式）](web.jingchengidea.6496)
-* [红麦舆情4.7测试上线版](http://www.soften.cn/)
-* [海密严选及红麦竞价](http://m.haimi.com/webapp/category)
-* ["某"锤数据展示]
-* [员工后台首页改版]
+* [诺基亚]()
+* [intel]()
+* [iplus]()
+* [会议报名]()
+* [淘香车]()
+* [富德]
 
 ![Image text](https://github.com/xujiaxin0929/xujiaxinVue/blob/master/static/1502038549.png)
 
